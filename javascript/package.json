@@ -2,6 +2,7 @@
   "name": "random-things",
   "version": "1.0.0",
   "description": "Random things I want to make and keep track of",
+  "type": "module",
   "devDependencies": {
     "eslint": "^8.31.0",
     "eslint-config-airbnb-base": "^15.0.0",

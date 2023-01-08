@@ -1,4 +1,4 @@
-const LinkedList = require('./list');
+import LinkedList from './list.js';
 
 const list = new LinkedList();
 list.append(10);
