@@ -7,3 +7,7 @@ list.append(30);
 
 console.log(list);
 console.log(list.contains(20));
+
+list.pop();
+console.log(list.size());
+console.log(JSON.stringify(list));
