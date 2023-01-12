@@ -40,6 +40,20 @@ export default class LinkedList {
     this.length++;
   }
 
+  getHead() {
+    return this.head;
+  }
+
+  getLast() {
+    let current = this.head;
+
+    while (current.next) {
+      current = current.next;
+    }
+
+    return current;
+  }
+
   pop() {
     let current = this.head;
     let previousNode;
@@ -61,5 +75,26 @@ export default class LinkedList {
 
     this.length--;
     return current.value;
+  }
+
+  insert(value, index) {
+    const node = new Node(value);
+    let current = this.head;
+    let previousNode;
+    let currentIndex = 0;
+
+    if (index === 0) {
+      node.next = this.head;
+      this.head = node;
+    } else {
+      while (currentIndex < index) {
+        previousNode = current;
+        current = current.next;
+        currentIndex++;
+      }
+      node.next = current;
+      previousNode.next = node;
+    }
+    this.length++;
   }
 }
