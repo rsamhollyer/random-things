@@ -97,4 +97,22 @@ export default class LinkedList {
     }
     this.length++;
   }
+
+  remove(index) {
+    let current = this.head;
+    let previousNode;
+    let currentIndex = 0;
+
+    if (index === 0) {
+      this.head = current.next;
+    } else {
+      while (currentIndex < index) {
+        previousNode = current;
+        current = current.next;
+        currentIndex++;
+      }
+      previousNode.next = current.next;
+    }
+    this.length--;
+  }
 }
